@@ -136,6 +136,9 @@ class EbayScraper:
             print("\nSeller Information not available.")
 
 if __name__ == "__main__":
-    url = 'https://www.ebay.com/itm/166864551603'
-    scraper = EbayScraper(url)
+    ebay_itm_url = 'https://www.ebay.com/itm/'
+    item_id = '166864551603'
+    full_url = ebay_itm_url + item_id
+    scraper = EbayScraper(full_url)
     scraper.scrape_and_save()
+
